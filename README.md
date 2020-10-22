@@ -7,8 +7,8 @@ A network surveillance camera. Using the Raspberry Pi as a server, web pages dis
   
       Web
   
-      | - static - style.css
+      | - static - | - style.css
   
-      | - templates - index.html
+      | - templates - | - index.html
   
       | - main.py
