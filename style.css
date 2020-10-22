@@ -1,0 +1,39 @@
+body {
+  background: #d0e4fe;
+  color: black;
+}
+
+button {
+  margin:10px;
+  
+  width:60px;
+  height:60px;
+  padding:6px;
+  border:1px;
+  border-radius:10px;
+  
+  font-size:15px;
+  color:black;
+  
+  background:yellow;
+}
+
+.button_block {
+  margin:10px;
+  
+  width:250px;
+  height:250px;
+  padding:6px;
+  border:1px;
+  border-radius:20px;
+  
+  background:pink;
+}
+
+.button_up {
+  margin:10px 94px;
+}
+
+.button_down {
+  margin:10px 94px;
+}
