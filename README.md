@@ -6,5 +6,7 @@ A network surveillance camera. Using the Raspberry Pi as a server, web pages dis
 ## File tree
 
 Web - | - static - style.css
+  
       | - templates - index.html
+  
       | - main.py
