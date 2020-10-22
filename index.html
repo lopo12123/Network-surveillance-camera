@@ -1,0 +1,89 @@
+<!DOCTYPE html>  <!--type-->
+<html lang="en">
+   <head>  <!--settings-->
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="../static/style.css/">
+   </head>
+   
+   <body>  <!-- Text part -->
+      <h3>&nbsp The date and time on the server is: {{ time }}</h3>
+      <h3>&nbsp The current camera movement state: {{ motion_state }}</h3>
+   </body>
+   
+   <div style="float:left">
+     <!-- Video part 
+     <body>
+       <video src="../static/video.mp4" width="960" height="540" autoplay="autoplay" loop="loop">
+         your browser does not support the video tag
+       </video>
+     </body>
+     -->
+     
+     <!-- image part -->
+     <body>
+       <img id="myimg" src="../static/a.jpg" width="800" height="600"></img>
+       <script type="text/javascript">
+         var photo = document.getElementById("myimg");
+         var n = 1;
+         
+         window.setInterval("change()",500);
+         function change(){
+           //Avoid the browser to read the picture from Cache
+           //Add a random number after the picture to change the request
+           photo.src="../static/a.jpg?"+Math.random();
+         };
+
+       </script>
+     </body>
+     
+     
+     <!-- MJPG part
+     <body>
+       <canvas id="myCanvas" width="800" height="600" style=margin:10px border:5px solid #c3c3c3; float:left"></canvas>
+       <script type="text/javascript">
+         var ctx = document.getElementById('myCanvas').getContext('2d');
+         var img = new Image();
+         // Comment out the following two lines of code when using it
+         //ctx.fillStyle="#c3c3c3";
+         //ctx.fillRect(0,0,800,600);
+         
+         img.onload = function(){
+           ctx.drawImage(img,0,0);
+         };
+         //var theDate = new Date();
+         
+         // Change img.src to the address where the actual video stream file is saved
+         // The format is img.src = "URL";
+         img.src = "../static/a.jpg"; //the src of the image or video
+         
+         // window.setInterval("functionname()",timescale);
+         // Execute function "functionname()" every "timescale" milliseconds
+         window.setInterval("refreshCanvas()",1000);
+         function refreshCanvas(){
+           ctx.drawImage(img,0,0);
+         };
+       </script>
+     </body>
+     -->
+   </div>
+   
+   <div style="float:right">
+     <body>  <!--Button part-->
+       <div class="button_block">
+          <div>  <!--line1-->
+             <button class="button_up" type = "button" onclick="location='/up'">Up</button>
+          </div>
+          <div>  <!--line2-->
+             <button class="button_left" type = "button" onclick="location='/left'">Left</button>
+             <button class="button_stop" type = "button" onclick="location='/stop'">Stop</button>
+             <button class="button_right" type = "button" onclick="location='/right'">Right</button>
+          </div>
+          <div>  <!--line3-->
+             <button class="button_down" type = "button" onclick="location='/down'">Down</button>
+          </div>
+        </div>
+     </body>
+   </div>
+   
+</html>
